@@ -1,0 +1,350 @@
+@import "cards.css";
+@import "buttons.css";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Poppins:wght@100;400;600&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+:root {
+  --primary: #3dcfd3;
+  --dark: #161616;
+  --pure: #ffffff;
+  --ternary: #898989;
+  --light: #f2f2f2;
+  --secondary: #070606;
+  --bg: #24aa94;
+  --bg-light: #24aa9444;
+  --text: white;
+  --hover: #ffff00;
+  --light: #ffff0031;
+}
+
+body {
+  /* box-sizing: border-box; */
+  font-family: "poppins", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smotthing: antialiased;
+}
+header {
+  /* background-color: #1a2151; */
+  background-color: #082032;
+}
+
+.container {
+  max-width: 1350px;
+  padding: 0 15px;
+  margin: 0 3.3rem;
+  margin-left: 5rem;
+  height: 800px;
+}
+.Line {
+  height: 1px;
+  border-width: 0;
+  color: gray;
+  background-color: gray;
+}
+
+header nav .left a {
+  color: whitesmoke;
+  text-decoration: none;
+  margin-right: 2.5rem;
+
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+header nav .left a:hover {
+  color: #ffab4c;
+}
+
+header nav {
+  /* first one is for (top and bottom) and second is for(left and right) */
+  padding: 2rem 0;
+}
+
+header nav .branding {
+  margin-right: 2rem;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  /* margin-right: 5rem; */
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+.hero .right {
+  color: white;
+  margin-left: 6rem;
+}
+.hero .right h6 {
+  font-size: 1rem;
+  color: var(--ternary);
+  margin-bottom: 0.5rem;
+}
+
+.hero .right h1 span {
+  color: #ff5f7e;
+  font-size: 9rem;
+
+  font-weight: 200;
+  font-family: "poppins", sans-serif;
+  -webkit-mask-image: linear-gradient(
+    -75deg,
+    rgba(0, 0, 0, 0.6) 30%,
+    #000 50%,
+    rgba(0, 0, 0, 0.6) 70%
+  );
+  -webkit-mask-size: 200%;
+  animation: shine 1.5s linear infinite;
+}
+
+@keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+  to {
+    -webkit-mask-position: -50%;
+  }
+}
+
+.hero .right h2 {
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+  font-family: "poppins", sans-serif;
+  -webkit-mask-image: linear-gradient(
+    -75deg,
+    rgba(0, 0, 0, 0.6) 30%,
+    #000 50%,
+    rgba(0, 0, 0, 0.6) 70%
+  );
+  -webkit-mask-size: 200%;
+  animation: shine 1.5s linear infinite;
+}
+
+@keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+  to {
+    -webkit-mask-position: -50%;
+  }
+}
+.hero p {
+  margin-bottom: 0.8rem;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+  padding: 20px 0px;
+  margin: 0px 20px;
+  display: inline-block;
+  position: relative;
+  opacity: 0.75;
+}
+
+.nav-link:hover {
+  opacity: 1;
+}
+
+.nav-link::before {
+  transition: 300ms;
+  height: 2px;
+  content: "";
+  position: absolute;
+  background-color: #ffffff;
+}
+
+.nav-link-fade-up::before {
+  width: 100%;
+  bottom: 5px;
+  opacity: 0;
+}
+
+.nav-link-fade-up:hover::before {
+  bottom: 10px;
+  opacity: 1;
+}
+
+.justify-center {
+  justify-content: center;
+
+  margin-left: 1.5rem;
+}
+
+.section-heading {
+  color: var(--secondary);
+  text-align: center;
+  margin-bottom: 1rem;
+  line-height: 0.5;
+  padding-top: 4rem;
+}
+
+.section-heading + p {
+  color: #6d8299;
+  font-family: "poppins", sans-serif;
+  margin-bottom: 6rem;
+  text-align: center;
+  font-size: 1rem;
+  padding-left: 3.7rem;
+  margin-bottom: 5rem;
+}
+
+.section-heading span {
+  color: #316b83;
+  font-size: 2.8rem;
+  font-weight: 400;
+  padding-left: 3rem;
+}
+
+section.services .card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 1.5rem;
+  padding: 3rem 8rem;
+  /* background-image: linear-gradient(to right, #e2ac6b, #e0d2b4); */
+  background: #142f43;
+  border-radius: 4rem;
+}
+
+section.services {
+  /* background: #e3e8ff; */
+  background: #d5bfbf;
+}
+
+section.services .card-wrapper .card {
+  line-height: 1.3em;
+  padding: 3.5rem 0 0;
+  max-width: 35ch;
+}
+
+.section-heading {
+  color: white;
+  font-weight: 400;
+  font-size: 2.7rem;
+}
+section.services .container {
+  height: 850px;
+}
+
+footer {
+  display: flex;
+  place-content: end;
+  flex-direction: column;
+  height: 500px;
+  /* padding-top: 5rem; */
+}
+
+footer {
+  background-color: #b5eaea;
+  line-height: 24px;
+  color: var(--text);
+  height: 398.9px;
+}
+
+footer .art {
+  background-color: #142f43;
+  padding: 70px;
+  padding-top: 41px;
+  clip-path: polygon(0% 5%, 15% 0%, 100% 10%, 100% 100%, 0% 100%);
+}
+
+.header-foot {
+  background-color: #142f43;
+}
+
+footer .content {
+  max-width: 1080px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 16px;
+}
+
+footer header {
+  font-size: 21px;
+  padding-block: 16px;
+}
+
+footer .content a {
+  display: block;
+  padding-block: 12px;
+  color: var(--text);
+  opacity: 0.65;
+  transition: all 0.4s ease;
+}
+footer .content a:hover {
+  opacity: 1;
+  color: #ffab4c;
+  font-size: 18px;
+}
+
+footer input {
+  border-style: solid;
+  line-height: 24px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  width: 100%;
+  margin-block: 8px;
+  border-radius: 8px;
+  border-width: 2px;
+  opacity: 0.4;
+}
+footer input[type="email"] {
+  background-color: transparent;
+  border-color: var(--text);
+  color: var(--text);
+}
+
+footer input[type="email"]:hover,
+footer input[type="email"]:focus {
+  border-color: var(--text);
+  color: var(--text);
+  opacity: 1;
+}
+
+footer input[type="submit"] {
+  background-color: var(--text);
+  color: var(--bg);
+  text-transform: uppercase;
+  border: none;
+}
+
+footer input[type="submit"]:hover {
+  background-color: var(--hover);
+}
+
+footer .social {
+  margin-block: 16px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 16px;
+}
+
+footer .social i {
+  font-size: 32px;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid var(--light);
+  border-radius: 8px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+footer .social i:hover {
+  color: var(--hover);
+  border-color: var(--hover);
+  box-shadow: 0px 0px 16px inset var(--light);
+}
+
+.head {
+  background: #142f43;
+}
